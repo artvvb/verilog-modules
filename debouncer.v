@@ -57,7 +57,7 @@ module debouncer #(
         .clock        (clock),
         .reset        (reset),
         .write_enable (enable),
-        .data_i       (),
+        .data_i       (next_state),
         .data_o       (state)
     );
 
