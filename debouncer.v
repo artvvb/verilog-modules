@@ -27,7 +27,6 @@ module debouncer #(
     localparam STATE_CHANGING = 1;
 
     wire state;
-    wire data;
     wire rollover;
     reg next_state;
 
@@ -80,6 +79,6 @@ module debouncer #(
         .reset        (reset),
         .write_enable (enable && data_write_enable),
         .data_i       (data_i),
-        .data_o       (data)
+        .data_o       (data_o)
     );
 endmodule
